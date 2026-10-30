@@ -4,17 +4,23 @@ const path = require('path');
 require('dotenv').config();
 
 // PostgreSQL Connection Pool Setup
-const pool = new Pool({
-  host: process.env.PGHOST || 'localhost',
-  port: parseInt(process.env.PGPORT || '5432', 10),
-  database: process.env.PGDATABASE || 'stockpilot_db',
-  user: process.env.PGUSER || process.env.USER || 'bajiyadav',
-  password: process.env.PGPASSWORD || undefined,
-  max: 20,
-  idleTimeoutMillis: 30000,
-  connectionTimeoutMillis: 2000,
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
-});
+const pool = new Pool(
+  process.env.DATABASE_URL
+    ? {
+        connectionString: process.env.DATABASE_URL,
+        ssl: { rejectUnauthorized: false }
+      }
+    : {
+        host: process.env.PGHOST || 'localhost',
+        port: parseInt(process.env.PGPORT || '5432', 10),
+        database: process.env.PGDATABASE || 'stockpilot_db',
+        user: process.env.PGUSER || process.env.USER || 'bajiyadav',
+        password: process.env.PGPASSWORD || undefined,
+        max: 20,
+        idleTimeoutMillis: 30000,
+        connectionTimeoutMillis: 2000
+      }
+);
 
 pool.on('error', (err) => {
   console.error('Unexpected error on idle PostgreSQL client:', err.message);
