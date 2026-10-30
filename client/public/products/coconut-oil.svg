@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a251b"/>
+      <stop offset="1%" stop-color="#191612"/>
+    </linearGradient>
+    <linearGradient id="oil" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="50%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+  </defs>
+  <rect width="80" height="80" rx="10" fill="url(#bg)"/>
+  <!-- Bottle body -->
+  <rect x="28" y="28" width="24" height="42" rx="5" fill="url(#oil)" opacity="0.9"/>
+  <!-- Bottle neck -->
+  <rect x="35" y="18" width="10" height="11" rx="2" fill="#fef08a" opacity="0.8"/>
+  <!-- Dropper cap -->
+  <rect x="33" y="13" width="14" height="6" rx="2" fill="#e2e8f0"/>
+  <rect x="37" y="8" width="6" height="5" rx="2" fill="#334155"/>
+  <!-- Label on bottle -->
+  <rect x="30" y="36" width="20" height="24" rx="2" fill="#ffffff" opacity="0.95"/>
+  <rect x="33" y="40" width="14" height="2" fill="#0f172a"/>
+  <rect x="35" y="44" width="10" height="1.5" fill="#64748b"/>
+  <circle cx="40" cy="51" r="3" fill="#10b981" opacity="0.8"/>
+</svg>

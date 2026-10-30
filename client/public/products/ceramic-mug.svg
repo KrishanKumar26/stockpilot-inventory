@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="mugBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#241e1c"/>
+      <stop offset="100%" stop-color="#141110"/>
+    </linearGradient>
+    <linearGradient id="ceramic" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="70%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+  </defs>
+  <rect width="80" height="80" rx="10" fill="url(#mugBg)"/>
+  <!-- Mug body -->
+  <rect x="24" y="26" width="28" height="34" rx="4" fill="url(#ceramic)"/>
+  <!-- Mug rim ellipse -->
+  <ellipse cx="38" cy="26" rx="14" ry="4" fill="#94a3b8"/>
+  <ellipse cx="38" cy="26" rx="12" ry="3" fill="#475569"/>
+  <!-- Mug handle -->
+  <path d="M52 32 C61 32 61 48 52 48" fill="none" stroke="#e2e8f0" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Clay speckled base -->
+  <path d="M24 54 Q38 58 52 54 L52 60 L24 60 Z" fill="#b45309" opacity="0.8"/>
+</svg>

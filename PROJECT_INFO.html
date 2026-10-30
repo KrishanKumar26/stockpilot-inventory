@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockPilot - Project Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #fff;
+        }
+        
+        h1 {
+            color: #2563eb;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+        }
+        
+        h2 {
+            color: #1e40af;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.6em;
+        }
+        
+        h3 {
+            color: #3b82f6;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        p, li {
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+        
+        .highlight {
+            background: #dbeafe;
+            padding: 15px;
+            border-left: 4px solid #2563eb;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+            text-align: center;
+            color: #64748b;
+        }
+        
+        @media print {
+            body {
+                padding: 20px;
+            }
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>📦 StockPilot - Smart Inventory Management System</h1>
+    
+    <div class="section">
+        <h2>📋 Project Kya Hai?</h2>
+        <p><strong>StockPilot</strong> ek inventory management system hai jo shops aur small businesses ke liye stock track karta hai aur automatically reorder karne mein madad karta hai.</p>
+    </div>
+
+    <div class="section">
+        <h2>🎯 Ye Project Kya Karta Hai?</h2>
+        
+        <h3>1. Products Ko Manage Karna</h3>
+        <ul>
+            <li>Products add, edit, delete kar sakte hain</li>
+            <li>Stock levels real-time track hota hai</li>
+            <li>Agar stock kam ho to alert milta hai</li>
+        </ul>
+
+        <h3>2. Automatic Reorder System</h3>
+        <ul>
+            <li>Jab product stock kam hota hai to system automatically suggest karta hai reorder karne ke liye</li>
+            <li>Supplier ko purchase order automatically generate hota hai</li>
+            <li>Order tracking (Sent → In Transit → Delivered)</li>
+        </ul>
+
+        <h3>3. Dashboard & Analytics</h3>
+        <ul>
+            <li>Total inventory value dikhata hai</li>
+            <li>Low stock alerts</li>
+            <li>Sales reports</li>
+            <li>Charts aur graphs</li>
+        </ul>
+
+        <h3>4. User Management</h3>
+        <ul>
+            <li>Login/Register system with OTP verification</li>
+            <li>Different roles: Admin, Manager, Staff</li>
+            <li>Admin panel for user management</li>
+        </ul>
+
+        <h3>5. Activity Logs</h3>
+        <ul>
+            <li>Sabhi actions ka record track hota hai</li>
+            <li>Kis user ne kya kiya, ye sab log mein save hai</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🛠️ Technologies Used</h2>
+        
+        <h3>Frontend</h3>
+        <table>
+            <tr>
+                <th>Technology</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td><strong>React</strong></td>
+                <td>User interface banane ke liye</td>
+            </tr>
+            <tr>
+                <td><strong>Vite</strong></td>
+                <td>Fast development aur build tool</td>
+            </tr>
+            <tr>
+                <td><strong>CSS</strong></td>
+                <td>Custom styling</td>
+            </tr>
+            <tr>
+                <td><strong>Recharts</strong></td>
+                <td>Charts aur graphs ke liye</td>
+            </tr>
+        </table>
+
+        <h3>Backend</h3>
+        <table>
+            <tr>
+                <th>Technology</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td><strong>Node.js + Express</strong></td>
+                <td>Server aur API</td>
+            </tr>
+            <tr>
+                <td><strong>PostgreSQL</strong></td>
+                <td>Main database (products, users, orders)</td>
+            </tr>
+            <tr>
+                <td><strong>MongoDB</strong></td>
+                <td>Activity logs store karne ke liye</td>
+            </tr>
+            <tr>
+                <td><strong>JWT</strong></td>
+                <td>Login authentication</td>
+            </tr>
+            <tr>
+                <td><strong>BCrypt</strong></td>
+                <td>Password security</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>📊 Database Structure</h2>
+        
+        <h3>PostgreSQL Tables</h3>
+        <ol>
+            <li><strong>users</strong> - Login credentials, roles (admin/manager/staff)</li>
+            <li><strong>products</strong> - Product details, price, stock quantity</li>
+            <li><strong>purchase_orders</strong> - Supplier orders, delivery tracking</li>
+            <li><strong>orders</strong> - Customer sales orders</li>
+            <li><strong>order_items</strong> - Order details (kaunsa product, kitni quantity)</li>
+        </ol>
+
+        <h3>MongoDB Collection</h3>
+        <ol>
+            <li><strong>logs</strong> - Sabhi activities ka record (low stock alerts, reorders, etc.)</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>🚀 Kaise Chalaye?</h2>
+        <pre>
+# 1. Dependencies install karo
+npm run install:all
+
+# 2. Database setup karo
+npm run seed
+
+# 3. Project run karo
+npm run dev</pre>
+
+        <div class="highlight">
+            <p><strong>URLs:</strong></p>
+            <ul>
+                <li>Frontend: <code>http://localhost:5174</code></li>
+                <li>Backend: <code>http://localhost:5002</code></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🔐 Test Accounts</h2>
+        <table>
+            <tr>
+                <th>Role</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+            <tr>
+                <td>Admin</td>
+                <td>admin@shopai.com</td>
+                <td>Password123</td>
+            </tr>
+            <tr>
+                <td>Manager</td>
+                <td>manager@shopai.com</td>
+                <td>Password123</td>
+            </tr>
+            <tr>
+                <td>Staff</td>
+                <td>staff@shopai.com</td>
+                <td>Password123</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>✨ Main Features</h2>
+        <div>
+            <span class="badge">✅ Product management</span>
+            <span class="badge">✅ Real-time stock tracking</span>
+            <span class="badge">✅ Low stock alerts</span>
+            <span class="badge">✅ AI reorder recommendations</span>
+            <span class="badge">✅ Automated purchase orders</span>
+            <span class="badge">✅ Order tracking</span>
+            <span class="badge">✅ Dashboard analytics</span>
+            <span class="badge">✅ User authentication</span>
+            <span class="badge">✅ Role-based access</span>
+            <span class="badge">✅ Activity logging</span>
+            <span class="badge">✅ Admin panel</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎤 Interview Ke Liye Key Points</h2>
+        
+        <div class="highlight">
+            <h3>1. Project Ka Purpose?</h3>
+            <p>"Ye ek inventory management system hai jo small businesses ko help karta hai apna stock manage karne mein. Jab products kam hote hain to automatic alert milta hai aur reorder kar sakte hain."</p>
+        </div>
+
+        <div class="highlight">
+            <h3>2. Technologies Kyun Use Kiye?</h3>
+            <p>"React fast aur modern UI ke liye, Node.js/Express backend API ke liye, PostgreSQL reliable data storage ke liye (transactions safe rehte hain), aur MongoDB fast logging ke liye use kiya."</p>
+        </div>
+
+        <div class="highlight">
+            <h3>3. Authentication Kaise Kiya?</h3>
+            <p>"JWT tokens use kiye for secure login. Password BCrypt se encrypt karke store hota hai. Registration mein OTP verification bhi hai security ke liye."</p>
+        </div>
+
+        <div class="highlight">
+            <h3>4. Automatic Reorder Kaise Kaam Karta Hai?</h3>
+            <p>"System continuously check karta hai ki kaunse products low stock mein hain. Jab stock minimum threshold se neeche jata hai, to recommendation show hota hai. User ek click mein purchase order create kar sakta hai jo supplier ko automatically send hota hai."</p>
+        </div>
+
+        <div class="highlight">
+            <h3>5. Database Kyun 2 Use Kiye (PostgreSQL + MongoDB)?</h3>
+            <p>"PostgreSQL main data ke liye use kiya kyunki ye safe transactions provide karta hai (jaise orders, payments). MongoDB logs ke liye use kiya kyunki ye fast write operations support karta hai aur main operations slow nahi hote."</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎯 Project Highlights</h2>
+        <ul>
+            <li><strong>Full Stack Application</strong> - Frontend + Backend + Database</li>
+            <li><strong>Dual Database System</strong> - PostgreSQL aur MongoDB dono</li>
+            <li><strong>Role-Based Access Control</strong> - Admin, Manager, Staff</li>
+            <li><strong>Real-Time Tracking</strong> - Live stock updates</li>
+            <li><strong>Automated Workflows</strong> - Auto reorder suggestions</li>
+            <li><strong>Security</strong> - JWT, BCrypt, OTP verification</li>
+            <li><strong>Professional UI</strong> - Clean, modern design</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p><strong>Developer:</strong> Krishan Kumar</p>
+        <p><strong>Tech Stack:</strong> React, Node.js, Express, PostgreSQL, MongoDB</p>
+        <p><strong>Project Type:</strong> Full Stack Web Application</p>
+        <p><strong>Purpose:</strong> Inventory Management & Automated Reordering System</p>
+    </div>
+</body>
+</html>
